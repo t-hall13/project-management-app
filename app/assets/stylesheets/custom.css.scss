@@ -1,8 +1,9 @@
 
 body {
     background-image: asset-url('space-x.jpg');
-    background-size: center;
+    background-size: cover;
     background-position: top;
+    color: #fff;
 }
 .center {
     text-align: center;
@@ -113,4 +114,15 @@ body {
 
 .extra {
     color: #5cb85c;
+}
+
+.no-side-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+.no-right-padding {
+    padding-right: 0 !important;
+}
+.no-left-padding {
+    padding-left: 0 !important;
 }
