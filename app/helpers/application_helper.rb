@@ -27,4 +27,8 @@ module ApplicationHelper
     end
     flash_messages.join("\n").html_safe
   end
+  
+  def tenant_name(tentant_id)
+     Tenant.find(tentant_id).name
+  end
 end

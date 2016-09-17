@@ -1,9 +1,10 @@
 <% if current_user %>
-<h3>Organization: <%= @tenant.name %></h3>
+<h3 class='pull-right '>Organization: <%= @tenant.name %></h3>
+<%= render 'projects/list' %>
 <% else %>
  <div class='jumbotron center'>
      <h2>Welcome to the Project Management App</h2>
-     <div class='center'>
+     <div class='center'> 
          <p class='lead'>
          Make your project easy to manage with this SaaS application.
      </p>
