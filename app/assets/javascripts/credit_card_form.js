@@ -9,7 +9,7 @@
         return sParameterName[1];
       }
     }
-  };
+  }
 
 $(document).ready(function(){
   
@@ -39,7 +39,7 @@ $(document).ready(function(){
     if(plan_type === 'premium') {
       $('[data-stripe]').prop('required', true);
       $form.off('submit');
-      $form.on('submit', submitHandler());
+      $form.on('submit', submitHandler);
       $('[data-stripe]').show();
     } else {
       $('[data-stripe]').hide();
@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 // set up plan change event listener  #tenant_plan id in the forms for class cc_form
   $('#tenant_plan').on('change', function(event){
-    handlePlanChange($('#tenant_plan :selectd').val(), '.cc_form');
+    handlePlanChange($('#tenant_plan :selected').val(), '.cc_form');
   });
 
 // call plan change handler so that the plan is set correctly in drop down when page loads
