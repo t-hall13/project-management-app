@@ -76,7 +76,7 @@ body {
 }
 .jumbotron {
     background: none;
-    height: 400px;
+    height: 300px;
     color: #fff;
     font-family: 'Helvetica Neue' !important;
     font-stretch: expanded;
@@ -113,7 +113,7 @@ body {
 }
 
 .extra {
-    color: #5cb85c;
+    color: #E0DB74;
 }
 
 .no-side-padding {
@@ -142,4 +142,22 @@ table tr td {
 
 .page-header h1 {
     color: #fff;
+}
+
+.fa.fa-rocket {
+    background: #fff;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: red;
+    padding: 6px;
+}
+
+.logout {
+    padding-left: 0;
+}
+
+.navbar.navbar-static-top {
+    background: #000;
+    color: #fff !important;
+    padding-bottom: 5px;
 }
