@@ -28,8 +28,8 @@ module ApplicationHelper
     flash_messages.join("\n").html_safe
   end
   
-  def tenant_name(tentant_id)
-     Tenant.find(tentant_id).name
+  def tenant_name(tenant_id)
+     Tenant.find(tenant_id).name
   end
   
   def s3(tenant_id, artifact_key)
