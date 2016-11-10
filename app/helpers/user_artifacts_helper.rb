@@ -1,0 +1,2 @@
+module UserArtifactsHelper
+end

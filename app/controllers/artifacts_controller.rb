@@ -30,7 +30,7 @@ class ArtifactsController < ApplicationController
     respond_to do |format|
       if @artifact.save
         UserNotifier.send_update_email(@user).deliver
-        binding:pry
+        
         format.html { redirect_to tenant_project_url(tenant_id: Tenant.current_tenant_id, 
           id: @artifact.project_id), notice: 'Artifact was successfully created.' }
         format.json { render :show, status: :created, location: @artifact }

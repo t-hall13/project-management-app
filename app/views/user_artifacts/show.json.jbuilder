@@ -1,0 +1,1 @@
+json.partial! "user_artifacts/user_artifact", user_artifact: @user_artifact
