@@ -29,9 +29,12 @@ class ArtifactsController < ApplicationController
 
     respond_to do |format|
       if @artifact.save
+       UserNotifier.send_update_email(@artifact).deliver
         format.html { redirect_to tenant_project_url(tenant_id: Tenant.current_tenant_id, 
           id: @artifact.project_id), notice: 'Artifact was successfully created.' }
         format.json { render :show, status: :created, location: @artifact }
+        
+        #redirect_to @artifact
       else
         format.html { render :new }
         format.json { render json: @artifact.errors, status: :unprocessable_entity }
@@ -68,6 +71,10 @@ class ArtifactsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_artifact
       @artifact = Artifact.find(params[:id])
+    end
+    
+    def set_artifact_users
+      @users = @artifact.project.users
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
