@@ -47,6 +47,7 @@ class ArtifactsController < ApplicationController
   def update
     respond_to do |format|
       if @artifact.update(artifact_params)
+        UserNotifier.send_update_email(@artifact).deliver
         format.html { redirect_to @artifact, notice: 'Artifact was successfully updated.' }
         format.json { render :show, status: :ok, location: @artifact }
       else
